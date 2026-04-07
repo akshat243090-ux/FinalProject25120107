@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NOVA — Web Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo" onclick="goTo('home')">NOVA</a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goTo('home'); return false;">Home</a></li>
+    <li><a href="#" onclick="goTo('about'); return false;">About</a></li>
+    <li><a href="#" onclick="goTo('services'); return false;">Services</a></li>
+    <li><a href="#" onclick="goTo('portfolio'); return false;">Work</a></li>
+    <li><a href="#" onclick="goTo('contact'); return false;">Contact</a></li>
+  </ul>
+  <a href="#" class="nav-cta" onclick="goTo('contact'); return false;">Hire Me</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="goTo('home'); toggleMenu(); return false;">Home</a>
+  <a href="#" onclick="goTo('about'); toggleMenu(); return false;">About</a>
+  <a href="#" onclick="goTo('services'); toggleMenu(); return false;">Services</a>
+  <a href="#" onclick="goTo('portfolio'); toggleMenu(); return false;">Work</a>
+  <a href="#" onclick="goTo('pricing'); toggleMenu(); return false;">Pricing</a>
+  <a href="#" onclick="goTo('contact'); toggleMenu(); return false;">Contact</a>
+</div>
+
+<!-- ============================================================
+     PAGE: HOME
+============================================================ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb2"></div>
+
+    <div class="hero-overline">Available for freelance work · Delhi, India</div>
+    <h1 class="hero-h1">Crafting Websites That <em>Demand</em> Attention</h1>
+    <p class="hero-sub">I'm Anika Verma — a freelance web designer turning ideas into elegant, high-converting digital experiences.</p>
+
+    <div class="hero-actions">
+      <a href="#" class="btn-primary" onclick="goTo('portfolio'); return false;">View My Work</a>
+      <a href="#" class="btn-ghost" onclick="goTo('contact'); return false;">Start a Project</a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-val"><span class="counter" data-target="47">0</span>+</div>
+        <div class="hero-stat-label">Projects</div>
+      </div>
+      <div>
+        <div class="hero-stat-val"><span class="counter" data-target="6">0</span></div>
+        <div class="hero-stat-label">Years Exp.</div>
+      </div>
+      <div>
+        <div class="hero-stat-val"><span class="counter" data-target="98">0</span>%</div>
+        <div class="hero-stat-label">Satisfaction</div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      Scroll to explore
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- filled by JS -->
+    </div>
+  </div>
+
+  <!-- ABOUT SNIPPET -->
+  <div class="section">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-frame">
+          <div class="about-img-inner">AV</div>
+        </div>
+        <div class="about-corner tl"></div>
+        <div class="about-corner br"></div>
+        <div class="about-badge">Based in<br>Delhi, India</div>
+      </div>
+      <div class="about-text reveal" style="transition-delay:0.15s">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-h2">Design is <em>thinking</em> made visual.</h2>
+        <p>I'm a self-taught designer and front-end developer with six years of experience crafting digital experiences for startups, creatives, and established businesses across India and beyond.</p>
+        <p>My work lives at the intersection of aesthetics and function. Every pixel has a purpose, every interaction a reason. I obsess over the details so you don't have to.</p>
+        <div class="about-skills">
+          <span class="skill-chip">UI Design</span>
+          <span class="skill-chip">Web Development</span>
+          <span class="skill-chip">Brand Identity</span>
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">React</span>
+          <span class="skill-chip">GSAP</span>
+          <span class="skill-chip">Webflow</span>
+          <span class="skill-chip">SEO</span>
+        </div>
+        <div style="margin-top:2rem">
+          <a href="#" class="btn-ghost" onclick="goTo('about'); return false;">Full Story →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED WORK -->
+  <section id="services" style="background:var(--surface)">
+    <div class="inner">
+      <div class="section-label reveal">What I Do</div>
+      <h2 class="section-h2 reveal" style="transition-delay:0.1s">Services built around <em>your</em> goals.</h2>
+      <div class="services-grid" style="margin-top:3rem">
+        <div class="service-card reveal">
+          <div class="service-num">01</div>
+          <div class="service-icon">◈</div>
+          <div class="service-title">Web Design</div>
+          <div class="service-desc">Custom-designed websites that reflect your brand and convert visitors. From wireframes to pixel-perfect prototypes.</div>
+          <div class="service-tags">
+            <span class="service-tag">Figma</span>
+            <span class="service-tag">Prototyping</span>
+            <span class="service-tag">Responsive</span>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.1s">
+          <div class="service-num">02</div>
+          <div class="service-icon">⬡</div>
+          <div class="service-title">Web Development</div>
+          <div class="service-desc">Clean, fast, and accessible code. Hand-crafted or CMS-powered — your site will be fast, maintainable, and built to scale.</div>
+          <div class="service-tags">
+            <span class="service-tag">HTML/CSS/JS</span>
+            <span class="service-tag">React</span>
+            <span class="service-tag">Webflow</span>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.2s">
+          <div class="service-num">03</div>
+          <div class="service-icon">◯</div>
+          <div class="service-title">Brand Identity</div>
+          <div class="service-desc">Logos, colour palettes, typography systems, and style guides that give your brand a consistent, memorable visual language.</div>
+          <div class="service-tags">
+            <span class="service-tag">Logo</span>
+            <span class="service-tag">Style Guide</span>
+            <span class="service-tag">Typography</span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem">
+        <a href="#" class="btn-ghost" onclick="goTo('services'); return false;">All Services →</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+<!-- ============================================================
+     PAGE: ABOUT
+============================================================ -->
+<div class="page" id="page-about">
+  <div style="padding-top:100px; background:var(--bg)">
+    <div class="section">
+      <div class="section-label">About Me</div>
+      <h1 class="section-h2" style="max-width:none; font-size: clamp(2.5rem,5vw,5rem)">I design with <em>intent</em>,<br>I build with care.</h1>
+
+      <div class="about-grid" style="margin-top:5rem">
+        <div class="about-img-wrap">
+          <div class="about-img-frame" style="aspect-ratio:1">
+            <div class="about-img-inner">AV</div>
+          </div>
+          <div class="about-corner tl"></div>
+          <div class="about-corner br"></div>
+          <div class="about-badge">6+ Years<br>of Craft</div>
+        </div>
+        <div class="about-text">
+          <p style="font-size:1.05rem; color:var(--ink); margin-bottom:1.5rem">Hey — I'm Anika. I started designing websites as a teenager obsessing over beautiful blogs and broke portfolios, and never stopped.</p>
+          <p>Over six years, I've worked with fashion labels, fintech startups, restaurants, NGOs, and solo creatives. Every project taught me something about communication, restraint, and the power of a well-placed whitespace.</p>
+          <p>I believe the web should be beautiful AND fast. That a great homepage should explain what you do in under 5 seconds. That accessibility isn't optional, it's respect.</p>
+          <p>When I'm not designing, I'm reading design theory, hiking in the Aravalli hills, or making too much filter coffee.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS BAR -->
+    <div style="background:var(--surface); padding:5rem 3rem; border-top:1px solid var(--border-dim)">
+      <div style="max-width:1280px; margin:0 auto">
+        <div class="section-label">Skills & Expertise</div>
+        <h2 class="section-h2">Competencies that <em>deliver</em>.</h2>
+        <div style="margin-top:3rem; max-width:680px" id="skillBars">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div style="padding:5rem 3rem; max-width:1280px; margin:0 auto">
+      <div class="section-label">My Journey</div>
+      <h2 class="section-h2">A path <em>paved</em> in pixels.</h2>
+      <div id="timeline" style="margin-top:3rem; border-left:1px solid var(--border); padding-left:2.5rem; max-width:640px">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PAGE: SERVICES (full)
+============================================================ -->
+<div class="page" id="page-services">
+  <div style="padding-top:100px">
+    <div class="section">
+      <div class="section-label">Services</div>
+      <h1 class="section-h2" style="font-size:clamp(2.5rem,5vw,5rem)">What I can do <em>for you.</em></h1>
+      <p style="color:var(--ink-dim); max-width:560px; margin-top:1rem; line-height:1.8">From a single landing page to a full brand overhaul — I cover every layer of your digital presence, end to end.</p>
+    </div>
+
+    <div id="services-full-section">
+      <div class="inner" style="max-width:1280px; margin:0 auto; padding:0 3rem 7rem">
+        <div class="services-grid">
+          <!-- 6 cards, filled by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div id="process" style="background:var(--surface)">
+      <div class="inner" style="max-width:1280px; margin:0 auto; padding:7rem 3rem">
+        <div class="section-label">How I Work</div>
+        <h2 class="section-h2">A process built for <em>clarity.</em></h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-num">01</div>
+            <div class="process-step-title">Discovery</div>
+            <div class="process-step-desc">We talk about your goals, audience, and vision. I ask a lot of questions — the right ones.</div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">02</div>
+            <div class="process-step-title">Strategy</div>
+            <div class="process-step-desc">I map out site structure, content strategy, and design direction before touching Figma.</div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">03</div>
+            <div class="process-step-title">Design</div>
+            <div class="process-step-desc">Wireframes first, then high-fidelity prototypes. You're involved at every step.</div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">04</div>
+            <div class="process-step-title">Launch</div>
+            <div class="process-step-desc">I build, test, and launch your site. Then I hand you everything — code, credentials, and a guide.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div id="pricing">
+      <div class="inner" style="max-width:1280px; margin:0 auto; padding:7rem 3rem">
+        <div class="section-label">Pricing</div>
+        <h2 class="section-h2">Transparent, honest <em>pricing.</em></h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-tier">Starter</div>
+            <div class="pricing-amount">₹35k</div>
+            <div class="pricing-per">one-time / single project</div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>1–3 Page Website</li>
+              <li>Mobile Responsive</li>
+              <li>Basic SEO Setup</li>
+              <li>Contact Form</li>
+              <li>2 Revision Rounds</li>
+              <li class="unavail">Custom Animations</li>
+              <li class="unavail">CMS Integration</li>
+              <li class="unavail">Analytics Setup</li>
+            </ul>
+            <a href="#" class="btn-ghost" style="width:100%; text-align:center; display:block; padding:0.9rem" onclick="goTo('contact'); return false;">Get Started</a>
+          </div>
+          <div class="pricing-card featured">
+            <div class="pricing-tier">Studio</div>
+            <div class="pricing-amount">₹85k</div>
+            <div class="pricing-per">one-time / full project</div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>5–8 Page Website</li>
+              <li>Mobile Responsive</li>
+              <li>Full SEO Optimization</li>
+              <li>Contact Form + CRM</li>
+              <li>4 Revision Rounds</li>
+              <li>Custom Animations</li>
+              <li>CMS Integration</li>
+              <li>Analytics Setup</li>
+            </ul>
+            <a href="#" class="btn-primary" style="width:100%; text-align:center; display:block; padding:0.9rem" onclick="goTo('contact'); return false;">Get Started</a>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-amount">Custom</div>
+            <div class="pricing-per">tailored to your scope</div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>Unlimited Pages</li>
+              <li>Mobile Responsive</li>
+              <li>Full SEO Suite</li>
+              <li>Custom Integrations</li>
+              <li>Unlimited Revisions</li>
+              <li>Custom Animations</li>
+              <li>E-Commerce Ready</li>
+              <li>Ongoing Support</li>
+            </ul>
+            <a href="#" class="btn-ghost" style="width:100%; text-align:center; display:block; padding:0.9rem" onclick="goTo('contact'); return false;">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PAGE: PORTFOLIO
+============================================================ -->
+<div class="page" id="page-portfolio">
+  <div style="padding-top:100px">
+    <div class="section">
+      <div class="section-label">Portfolio</div>
+      <h1 class="section-h2" style="font-size:clamp(2.5rem,5vw,5rem)">Work that <em>speaks</em> first.</h1>
+      <div class="portfolio-filter" id="portfolioFilter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="brand">Branding</button>
+        <button class="filter-btn" data-filter="ecom">E-Commerce</button>
+        <button class="filter-btn" data-filter="landing">Landing Pages</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div style="background:var(--surface); border-top:1px solid var(--border-dim)">
+      <div class="section">
+        <div class="section-label">Kind Words</div>
+        <h2 class="section-h2">Clients who <em>trust</em> the work.</h2>
+        <div class="testimonial-cards">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <div class="quote-mark">"</div>
+            <div class="testimonial-text">Anika completely transformed our online presence. The new site is stunning, fast, and our conversion rate jumped 40% in the first month.</div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RS</div>
+              <div>
+                <div class="author-name">Rohan Sharma</div>
+                <div class="author-role">CEO, Neem & Co.</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <div class="quote-mark">"</div>
+            <div class="testimonial-text">Working with Anika felt collaborative and stress-free. She understood our brand better than we did and delivered ahead of schedule.</div>
+            <div class="testimonial-author">
+              <div class="author-avatar">PM</div>
+              <div>
+                <div class="author-name">Priya Mehta</div>
+                <div class="author-role">Founder, Studio Amara</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <div class="quote-mark">"</div>
+            <div class="testimonial-text">The attention to detail is extraordinary. Every hover state, every animation felt intentional. Our clients constantly compliment the site.</div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AK</div>
+              <div>
+                <div class="author-name">Arjun Kapoor</div>
+                <div class="author-role">Director, Kashmiri Roots</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <div class="quote-mark">"</div>
+            <div class="testimonial-text">Hired Anika for a quick landing page. Got an entire brand rethink that changed how we pitch to investors. Worth every paisa.</div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SN</div>
+              <div>
+                <div class="author-name">Sneha Nair</div>
+                <div class="author-role">Co-founder, GreenRoot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PAGE: CONTACT
+============================================================ -->
+<div class="page" id="page-contact">
+  <div id="contact-section" style="padding-top:100px">
+    <div class="section">
+      <div class="section-label">Contact</div>
+      <h1 class="section-h2" style="font-size:clamp(2.5rem,5vw,5rem)">Let's build something <em>remarkable.</em></h1>
+
+      <div class="contact-grid" style="margin-top:4rem">
+        <div class="contact-info">
+          <p>Got a project in mind? I'd love to hear about it. Fill out the form and I'll get back to you within 24 hours. Or just say hi.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">✉</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-val">anika@novadesign.in</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">☎</div>
+              <div>
+                <div class="contact-detail-label">Phone</div>
+                <div class="contact-detail-val">+91 98100 00000</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">◎</div>
+              <div>
+                <div class="contact-detail-label">Location</div>
+                <div class="contact-detail-val">Delhi, India — Available Worldwide</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">◷</div>
+              <div>
+                <div class="contact-detail-label">Availability</div>
+                <div class="contact-detail-val">Currently accepting new projects</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name *</label>
+              <input class="form-input" type="text" id="fname" placeholder="Rohan" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input class="form-input" type="text" id="lname" placeholder="Sharma" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address *</label>
+            <input class="form-input" type="email" id="email" placeholder="rohan@company.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Project Type</label>
+            <select class="form-select" id="projectType">
+              <option value="">Select a service...</option>
+              <option>Web Design</option>
+              <option>Web Development</option>
+              <option>Brand Identity</option>
+              <option>Landing Page</option>
+              <option>E-Commerce</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Budget Range</label>
+            <select class="form-select" id="budget">
+              <option value="">Select budget...</option>
+              <option>₹25k – ₹50k</option>
+              <option>₹50k – ₹1L</option>
+              <option>₹1L – ₹2L</option>
+              <option>₹2L+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tell Me About Your Project *</label>
+            <textarea class="form-textarea" id="message" placeholder="What are you building, who is it for, and when do you need it?"></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">
+            <div class="btn-fill"></div>
+            <span>Send Message →</span>
+          </button>
+          <div class="form-message" id="formMessage">✓ Message sent! I'll be in touch within 24 hours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER (global) -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo-area">
+        <a class="nav-logo" href="#" onclick="goTo('home'); return false;">NOVA</a>
+        <div class="footer-tagline">Freelance web design studio based in Delhi. Building digital experiences with purpose.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="goTo('home'); return false;">Home</a></li>
+          <li><a href="#" onclick="goTo('about'); return false;">About</a></li>
+          <li><a href="#" onclick="goTo('services'); return false;">Services</a></li>
+          <li><a href="#" onclick="goTo('portfolio'); return false;">Portfolio</a></li>
+          <li><a href="#" onclick="goTo('contact'); return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Brand Identity</a></li>
+          <li><a href="#">Landing Pages</a></li>
+          <li><a href="#">E-Commerce</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <div class="social-links" style="margin-bottom:1.5rem">
+          <a class="social-link" href="#" title="Instagram">in</a>
+          <a class="social-link" href="#" title="Twitter">𝕏</a>
+          <a class="social-link" href="#" title="LinkedIn">li</a>
+          <a class="social-link" href="#" title="Dribbble">dr</a>
+          <a class="social-link" href="#" title="Behance">be</a>
+        </div>
+        <div class="contact-detail-label" style="margin-bottom:0.4rem">Email</div>
+        <div style="font-size:0.88rem; color:var(--amber)">anika@novadesign.in</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 NOVA by Anika Verma. All rights reserved.</span>
+      <span>Designed & built with obsessive care.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-cat" id="modalCat"></div>
+    <div class="modal-title" id="modalTitle"></div>
+    <div class="modal-desc" id="modalDesc"></div>
+    <div class="modal-tech" id="modalTech"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script src="script.js"></script>
+</body>
+</html>
